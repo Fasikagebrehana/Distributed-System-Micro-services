@@ -19,4 +19,7 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('user/', include('user_service.urls')),
+    path('task/', include('task_service.urls')),
+    path('notification/', include('notification_service.urls')),
 ]

@@ -23,3 +23,4 @@ urlpatterns = [
     path('task/', include('task_service.urls')),
     path('notification/', include('notification_service.urls')),
 ]
+

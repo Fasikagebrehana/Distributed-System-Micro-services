@@ -80,7 +80,7 @@ class DesktopApp:
         channel.exchange_declare(exchange='task_notifications', exchange_type='topic')
         result = channel.queue_declare(queue='', exclusive=True)
         queue_name = result.method.queue
-        # Use a wildcard binding key if you want to receive all messages
+       
         channel.queue_bind(exchange='task_notifications', queue=queue_name, routing_key="#")
 
         def callback(ch, method, properties, body):
